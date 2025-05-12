@@ -1,11 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WDD231 Home Page - Web Development Course" />
+    <meta name="author" content="Your Name Here" />
+    <title>WDD231 - Home Page</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/small.css" />
+    <link rel="stylesheet" href="css/larger.css" />
+    <script src="js/date.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/course.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <img src="images/your-photo.jpg" alt="Your Photo" width="100" height="100" />
+        <h1>Your Name Here</h1>
+    </header>
+
+    <nav>
+        <button id="menu" aria-label="Toggle navigation menu">☰ Menu</button>
+        <ul class="navigation" aria-label="Main navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final Project</a></li>
+            <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>About the Course</h2>
+            <p>This course is part of the Web and Computer Programming Certificate.</p>
+        </section>
+
+        <section>
+            <h2>Courses</h2>
+            <div id="course-cards" aria-live="polite"></div>
+            <div id="course-filters">
+                <button id="show-all">All</button>
+                <button id="show-wdd">WDD</button>
+                <button id="show-cse">CSE</button>
+            </div>
+            <p>Total Credits: <span id="credit-count">0</span></p>
+        </section>
+
+        <section>
+            <h2>Resources</h2>
+            <p>Here you will find links and supporting materials for your lessons.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Your Name Here - Country</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
