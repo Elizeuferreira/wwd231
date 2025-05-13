@@ -1,21 +1,37 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get the current year
-    var currentYear = new Date().getFullYear();
-    // Update the current year in the footer
-    document.getElementById("currentYear").textContent = currentYear;
+// getDates.js
 
-    // Get the last modified date of the document
-    var lastModifiedDate = new Date(document.lastModified);
-    // Format the last modified date
-    var formattedLastModifiedDate = lastModifiedDate.toLocaleDateString("en-US", { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric', 
-        hour: 'numeric', 
-        minute: 'numeric', 
-        second: 'numeric', 
-        timeZoneName: 'short' 
-    });
-    // Update the last modified date in the second paragraph of the footer
-    document.getElementById("lastModified").textContent = "Last modified: " + formattedLastModifiedDate;
-});
+// Atualiza o ano no rodapé
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+// Atualiza data da última modificação do documento
+document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
+
+// === WEATHER ===
+const apiKey = 'YOUR_API_KEY'; // substitua com sua chave da OpenWeatherMap
+const city = 'Manaus';
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById('current-temp').textContent = `${data.main.temp.toFixed(1)} °C`;
+    const icon = data.weather[0].icon;
+    const description = data.weather[0].description;
+    const weatherIcon = document.getElementById('weather-icon');
+    const figcaption = weatherIcon.nextElementSibling;
+
+    weatherIcon.src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+    weatherIcon.alt = description;
+    figcaption.textContent = description.charAt(0).toUpperCase() + description.slice(1);
+  })
+  .catch(error => {
+    document.getElementById('current-temp').textContent = 'Unavailable';
+    console.error('Erro ao buscar clima:', error);
+  });
+
+// === PAGE VISITS ===
+const visitDisplay = document.querySelector(".visits");
+let numVisits = Number(window.localStorage.getItem("visits-ls")) || 0;
+visitDisplay.textContent = numVisits;
+localStorage.setItem("visits-ls", ++numVisits);
+

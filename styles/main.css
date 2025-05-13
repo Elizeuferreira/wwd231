@@ -111,3 +111,20 @@ footer {
     margin-right: 1rem;
   }
 }
+#weather-icon {
+  width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+section.card figure {
+  text-align: center;
+  margin: 0;
+}
+
+section.card figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
