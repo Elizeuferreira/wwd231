@@ -1,0 +1,12 @@
+#menu {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.navigation.open {
+  display: flex;
+}
