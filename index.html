@@ -1,82 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-US">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elizeu Ferreira - WDD 231 - Web Frontend Development</title>
-<meta name="description" content="WDD 231 - Web Frontend Development I. Elizeu F da Silva - course assignment portal.">
-<meta name="Efs" content="Elizeu Ferreira da Silva">
-<link rel="icon" href="favicon.ico" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elizeu Ferreira - WDD 231 - Web Frontend Development</title>
+  <meta name="description" content="WDD 231 - Web Frontend Development I. Elizeu F da Silva - course assignment portal.">
+  <meta name="author" content="Elizeu Ferreira da Silva">
+  <link rel="icon" href="favicon.ico" />
 
+  <!-- Fonte externa -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" media="screen and (min-width: 768px)" href="styles/large.css">
 
-    <!-- Link to your CSS file(s) -->
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" media="screen and (min-width: 768px)" href="styles/large.css">
+  <!-- JS externo -->
+  <script src="scripts/getDates.js" defer></script>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <!-- Your optimized profile image and name -->
-            <span> </span><img class="profile-picture" src="images/eli.png" alt="Elizeu Ferreira Profile" width="100" height="180">
-            </span>
-            <h1> Elizeu Ferreira </h1>
-        </header>
+  <div class="container">
+    <header>
+      <img class="profile-picture" src="images/eli.png" alt="Elizeu Ferreira Profile" width="100" height="180">
+      <h1>Elizeu Ferreira</h1>
+    </header>
 
-        <nav>  <!-- Navigation links -->
-            
-            <ul class="navigation">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Chamber</a></li>
-                <li><a href="#">final project</a></li>
-                <li><a href="#">GitHub Profile</a></li>
-                <li><a href="#">linkedIn</a></li>
-            </ul>
-        </nav>
+    <nav>
+      <ul class="navigation">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Chamber</a></li>
+        <li><a href="#">Final Project</a></li>
+        <li><a href="https://github.com/seuusuario">GitHub Profile</a></li>
+        <li><a href="https://linkedin.com/in/seuperfil">LinkedIn</a></li>
+      </ul>
+    </nav>
 
-        <main>
-            <h1>WDD 231: Web Frontend Development I</h1>
-            <div class="card">
-                <div class="">
-                    <section class="card" id="card1">
-                        <h2>Learning Activities</h2>
-                        <ul id="links">
-                            <li>Week 1:  <a href="https://www.linkedin.com/in/elizeufsilva/">LinkedIn profile</a>
-                                <span> | </span><a href="#">Media Query</a>
-                                <span> | </span><a href="#">JS Pen</a>
-                                <span> | </span></li>
+    <main>
+      <h1>WDD 231: Web Frontend Development I</h1>
+      <div class="card">
+        <section class="card" id="card1">
+          <h2>Learning Activities</h2>
+          <ul id="links">
+            <li>
+              Week 1:
+              <a href="https://www.linkedin.com/in/elizeufsilva/">LinkedIn profile</a>
+              <span> | </span><a href="#">Media Query</a>
+              <span> | </span><a href="#">JS Pen</a>
+            </li>
+          </ul>
+        </section>
 
-                        </ul>
-                    </section>
-                    <section class="card" id="card2">
-                        <h2>Information</h2>
-                        <p>Amazonas, Brazil</p>
-                        <figure>
-                            <img src="#" alt="" id="weather-icon">
-                            <figcaption></figcaption>
-                        </figure>
-                        <p>Temperature: <span id="current-temp"></span></p>
-                        <p>Page Visits: <span class="visits"></span></p>
-                    </section>
-        
-                    <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1557540.731469432!2d-60.20670837268664!3d-3.119027287232793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d24a244299c1f%3A0xc282e037f66085a5!2sManaus%2C%20State%20of%20Amazonas%2C%20Brazil!5e0!3m2!1sen!2sus!4v1647381161090!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section class="card" id="card2">
+          <h2>Information</h2>
+          <p>Amazonas, Brazil</p>
+          <figure>
+            <img src="#" alt="Weather Icon" id="weather-icon">
+            <figcaption></figcaption>
+          </figure>
+          <p>Temperature: <span id="current-temp"></span></p>
+          <p>Page Visits: <span class="visits"></span></p>
+        </section>
 
-                    </div>
-        
-                </div>
-        </main>
-    </div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1557540.731469432!2d-60.20670837268664!3d-3.119027287232793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d24a244299c1f%3A0xc282e037f66085a5!2sManaus%2C%20State%20of%20Amazonas%2C%20Brazil!5e0!3m2!1sen!2sus!4v1647381161090!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </main>
+  </div>
 
-    <footer>
-        <p>&copy; <span id="currentYear"></span> Elizeu Ferreira - Brazil </p>
-        <p id="lastModified"></p>
-    </footer>
-
-    <!-- Reference to your JavaScript file(s) -->
-    <script src="scripts/getDates.js"></script>
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Elizeu Ferreira - Brazil</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
+
 </html>
