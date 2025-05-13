@@ -1,21 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-US">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Book your adventure trip on the Salmon River. Half-day, full-day, and multi-day rafting experiences with professional guides." />
-    <meta property="og:title" content="Trips — Salmon River Experience" />
-    <meta property="og:description" content="BOOK A TRIP with Salmon River Experience" />
-    <meta property="og:image" content="https://images.squarespace-cdn.com/content/v1/593aef3b9de4bb736aa771e9/1538959218200/image.png?format=1500w" />
-    <meta property="og:url" content="https://salmonriverexperience.com/trips" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Trips — Salmon River Experience" />
-    <meta name="twitter:description" content="BOOK A TRIP with Salmon River Experience" />
-    <meta name="author" content="Salmon River Experience" />
-    <title>Trips — Salmon River Experience</title>
-    <link rel="icon" href="https://images.squarespace-cdn.com/content/v1/593aef3b9de4bb736aa771e9/1500066892678-6VI3XQF89AFCTCRJ6AYZ/favicon.ico" />
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <script src="js/navigation.js" defer></script>
-    <!-- GitHub Pages base path (uncomment and set if deploying to a subfolder) -->
-    <!-- <base href="/NOME-DO-REPO/" /> -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elizeu Ferreira - WDD 230 - Web Frontend Development</title>
+<meta name="description" content="WDD 230 - Web Frontend Development. Elizeu F da Silva - course assignment portal.">
+<meta name="Efs" content="Elizeu Ferreira da Silva">
+<link rel="icon" href="favicon.ico" />
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <!-- Link to your CSS file(s) -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="styles/large.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <!-- Your optimized profile image and name -->
+            <span> </span><img class="profile-picture" src="images/eli.png" alt="Elizeu Ferreira Profile" width="100" height="180">
+            </span>
+            <h1> Elizeu Ferreira </h1>
+        </header>
+
+        <nav>  <!-- Navigation links -->
+            
+            <ul class="navigation">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Chamber</a></li>
+                <li><a href="#">Site Plan</a></li>
+                <li><a href="#">Form</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h1>WDD 230: Web Frontend Development</h1>
+            <div class="card">
+                <div class="">
+                    <section class="card" id="card1">
+                        <h2>Learning Activities</h2>
+                        <ul id="links">
+                            <li>Week 1:  <a href="index.html">Layout</a>
+                                <span> | </span><a href="#">Media Query</a>
+                                <span> | </span><a href="#">JS Pen</a>
+                                <span> | </span></li>
+
+                        </ul>
+                    </section>
+                    <section class="card" id="card2">
+                        <h2>Information</h2>
+                        <p>Amazonas, Brazil</p>
+                        <figure>
+                            <img src="#" alt="" id="weather-icon">
+                            <figcaption></figcaption>
+                        </figure>
+                        <p>Temperature: <span id="current-temp"></span></p>
+                        <p>Page Visits: <span class="visits"></span></p>
+                    </section>
+        
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1557540.731469432!2d-60.20670837268664!3d-3.119027287232793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d24a244299c1f%3A0xc282e037f66085a5!2sManaus%2C%20State%20of%20Amazonas%2C%20Brazil!5e0!3m2!1sen!2sus!4v1647381161090!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                    </div>
+        
+                </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Elizeu Ferreira - Brazil </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <!-- Reference to your JavaScript file(s) -->
+    <script src="scripts/getDates.js"></script>
+</body>
+</html>
