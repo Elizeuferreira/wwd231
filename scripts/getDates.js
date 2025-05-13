@@ -7,7 +7,7 @@ document.getElementById("currentYear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
 // === WEATHER ===
-const apiKey = 'YOUR_API_KEY'; // substitua com sua chave da OpenWeatherMap
+const apiKey = '6caeed8465fb450f48be3649267d206a'; // substitua com sua chave da OpenWeatherMap
 const city = 'Manaus';
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
