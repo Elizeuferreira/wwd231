@@ -1,15 +1,19 @@
-// navigation.js
+
 
 document.addEventListener('DOMContentLoaded', () => {
-  const menuBtn = document.createElement('button');
-  menuBtn.id = 'menu';
-  menuBtn.innerHTML = '&#9776;';
-  menuBtn.setAttribute('aria-label', 'Menu');
-  document.querySelector('nav').prepend(menuBtn);
+  // Cria o botão de menu (hamburger)
+  const menuButton = document.createElement('button');
+  menuButton.id = 'menuButton';
+  menuButton.setAttribute('aria-label', 'Open Menu');
+  menuButton.innerHTML = '&#9776;'; // ícone hamburger
+  document.querySelector('nav').prepend(menuButton);
 
+  // Referência ao menu
   const navMenu = document.querySelector('.navigation');
-  menuBtn.addEventListener('click', () => {
+
+  // Ação de clique
+  menuButton.addEventListener('click', () => {
     navMenu.classList.toggle('open');
-    menuBtn.classList.toggle('open');
+    menuButton.classList.toggle('open');
   });
 });
